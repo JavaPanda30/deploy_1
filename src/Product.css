@@ -13,11 +13,12 @@
 }
 
 .product>img {
-    max-height: 200px;
+    height: 10rem;
     width: 100%;
     object-fit: contain;
     margin-bottom: 15px;
     margin-top: 5px;
+    overflow: scroll;
 }
 
 .product>button {
@@ -26,7 +27,7 @@
     margin-top: 10px;
     border-color: #a88734 #9c7e31 #846a29;
     color: #111;
-    border-radius: 10px;
+    font-size: m;
 }
 
 .product_star {
@@ -39,8 +40,19 @@
 }
 
 .product_info {
-    /* width: 100%; */
     text-wrap: wrap;
-    height: 100px;
+    width: 100%;
     margin-bottom: 15px;
+    overflow: hidden;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .product_info{
+        height: 80vh;
+    }
+    .product>img{
+    height: 100%;
+    overflow: scroll;
+    }
 }

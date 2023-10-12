@@ -18,7 +18,7 @@ function Header() {
       </Link>
 
       <div className="header_search">
-        <input type="text" className="header_searchIn" />
+        <input type="text" className="header_searchIn" placeholder="Search FavouriteBrands,Deals,and Accessories" />
         <IconSearch className="header_searchIcon" />
       </div>
 
@@ -42,6 +42,10 @@ function Header() {
           <span className="header_count_cart">{basket?.length}</span>
         </div>
         </Link>
+        <div className="searchbar_sm"> 
+        <input type="text" className="header_searchIn_sm" placeholder="Search FavouriteBrands,Deals,and Accessories" />
+        <IconSearch className="header_searchIcon header_searchIcon_sm" />
+        </div>
       </div>
     </div>
   );

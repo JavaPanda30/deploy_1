@@ -1,6 +1,6 @@
 import React , {createContext, useContext, useReducer} from "react";
 
-//prepare datalayer
+//prepare data storage 
 export const StateContext =  createContext();
 
 //wrap our app and provide the data layer

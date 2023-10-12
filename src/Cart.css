@@ -1,16 +1,25 @@
 .cart{
     display: flex;
     padding: 20px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     max-height:max-content;
 }
 .cart_ad{
     width: 100%;
-    height: 200px;
     margin-bottom: 5px;
 }
 .cart_title{
     margin-right: 10px;
     padding: 10px;
     border-bottom: 2px solid gray;
+}
+
+.cart_left{
+    width: 55%;
+}
+
+@media (max-width:600px){
+    .cart{
+        width: 95vh;
+    }
 }

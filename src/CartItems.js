@@ -3,7 +3,14 @@ import "./CartItems.css";
 import { useStateValue } from "./StateProvider";
 
 function CartItems() {
-  const [{ basket }] = useStateValue();
+  const [{ basket }, dispatch] = useStateValue();
+  const removefromcart = (id) => {
+    //dispatch action on clicking the button into reducer
+    dispatch({
+      type: "REMOVE_FROM_CART",
+      id:id,
+    });
+  };
 
   return (
     <div className="cart_item">
@@ -12,7 +19,6 @@ function CartItems() {
           <div className="item_box_left">
             <img className="item_image" src={item.image} alt="" />
           </div>
-
           <div className="item_box_right">
             <strong>
               <p>{item.title}</p>
@@ -25,7 +31,7 @@ function CartItems() {
                   <p>🌟</p>
                 ))}
             </div>
-            <button>Remove From Cart</button>
+            <button onClick={()=>removefromcart(item.id)}>Remove From Cart</button>
           </div>
         </div>
       ))}
